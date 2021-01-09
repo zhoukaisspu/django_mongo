@@ -12,3 +12,4 @@ class Blog(models.Model):
 class Entry(models.Model):
     blog = models.EmbeddedField(model_container=Blog,)
     headline = models.CharField(max_length = 255)
+    objects = models.DjongoManager()
