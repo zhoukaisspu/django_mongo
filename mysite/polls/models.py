@@ -13,3 +13,6 @@ class Entry(models.Model):
     blog = models.EmbeddedField(model_container=Blog,)
     headline = models.CharField(max_length = 255)
     objects = models.DjongoManager()
+
+    def __str__(self):
+        return str(self.blog) + str(self.headline)
